@@ -1,0 +1,29 @@
+FFF                                                                      [100%]
+________________________ test_parse_setpoint_no_crash _________________________
+    | ValueError: could not convert string to float: ''
+    | Failing test case: test_parse_setpoint_no_crash(
+    |     s='',
+    | TypeError: 'NoneType' object is not subscriptable
+    | Failing test case: test_parse_setpoint_no_crash(
+    |     s=None,
+______________________ test_average_temperature_no_crash ______________________
+    | ValueError: could not convert string to float: ''
+    | Failing test case: test_average_temperature_no_crash(
+    |     s='',
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | Failing test case: test_average_temperature_no_crash(
+    |     s=None,
+_________________________ test_schedule_slot_no_crash _________________________
+    | ValueError: invalid literal for int() with base 10: ''
+    | Failing test case: test_schedule_slot_no_crash(
+    |     s=':',
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | Failing test case: test_schedule_slot_no_crash(
+    |     s='',  # or any other generated value
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | Failing test case: test_schedule_slot_no_crash(
+    |     s=None,  # or any other generated value
+FAILED test_thermostat_control.py::test_parse_setpoint_no_crash - ExceptionGr...
+FAILED test_thermostat_control.py::test_average_temperature_no_crash - Except...
+FAILED test_thermostat_control.py::test_schedule_slot_no_crash - ExceptionGro...
+3 failed, 1 warning in 5.04s

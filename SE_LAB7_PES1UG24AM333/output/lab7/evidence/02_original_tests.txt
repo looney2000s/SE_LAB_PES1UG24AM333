@@ -1,0 +1,119 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+________________________ test_parse_setpoint_no_crash _________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 5, in test_parse_setpoint_no_crash
+  |     @settings(max_examples=200)
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 7, in test_parse_setpoint_no_crash
+    |     parse_setpoint(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\thermostat_control.py", line 2, in parse_setpoint
+    |     value = float(text[:-1])
+    | ValueError: could not convert string to float: ''
+    | Failing test case: test_parse_setpoint_no_crash(
+    |     s='',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 7, in test_parse_setpoint_no_crash
+    |     parse_setpoint(s)
+    |     ~~~~~~~~~~~~~~^^^
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\thermostat_control.py", line 2, in parse_setpoint
+    |     value = float(text[:-1])
+    |                   ~~~~^^^^^
+    | TypeError: 'NoneType' object is not subscriptable
+    | Failing test case: test_parse_setpoint_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+______________________ test_average_temperature_no_crash ______________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 10, in test_average_temperature_no_crash
+  |     @settings(max_examples=200)
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 2 distinct failures. (2 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 12, in test_average_temperature_no_crash
+    |     average_temperature(s)
+    |     ~~~~~~~~~~~~~~~~~~~^^^
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\thermostat_control.py", line 8, in average_temperature
+    |     values = [float(r) for r in readings_csv.split(',')]
+    |               ~~~~~^^^
+    | ValueError: could not convert string to float: ''
+    | Failing test case: test_average_temperature_no_crash(
+    |     s='',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 12, in test_average_temperature_no_crash
+    |     average_temperature(s)
+    |     ~~~~~~~~~~~~~~~~~~~^^^
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\thermostat_control.py", line 8, in average_temperature
+    |     values = [float(r) for r in readings_csv.split(',')]
+    |                                 ^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | Failing test case: test_average_temperature_no_crash(
+    |     s=None,
+    | )
+    +------------------------------------
+_________________________ test_schedule_slot_no_crash _________________________
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 15, in test_schedule_slot_no_crash
+  |     @settings(max_examples=200)
+  |                    ^^^
+  | ExceptionGroup: Hypothesis found 3 distinct failures. (3 sub-exceptions)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 17, in test_schedule_slot_no_crash
+    |     schedule_slot(s)
+    |     ~~~~~~~~~~~~~^^^
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\thermostat_control.py", line 13, in schedule_slot
+    |     hour = int(hour)
+    | ValueError: invalid literal for int() with base 10: ''
+    | Failing test case: test_schedule_slot_no_crash(
+    |     s=':',
+    | )
+    +---------------- 2 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 17, in test_schedule_slot_no_crash
+    |     schedule_slot(s)
+    |     ~~~~~~~~~~~~~^^^
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\thermostat_control.py", line 12, in schedule_slot
+    |     hour, minute = time_text.split(':')
+    |     ^^^^^^^^^^^^
+    | ValueError: not enough values to unpack (expected 2, got 1)
+    | Failing test case: test_schedule_slot_no_crash(
+    |     s='',  # or any other generated value
+    | )
+    +---------------- 3 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\test_thermostat_control.py", line 17, in test_schedule_slot_no_crash
+    |     schedule_slot(s)
+    |     ~~~~~~~~~~~~~^^^
+    |   File "C:\Users\abdullah\Documents\sem5DUMP\SE\SE LAB 7\L6_L7_29_thermostat_control\lab7\thermostat_control.py", line 12, in schedule_slot
+    |     hour, minute = time_text.split(':')
+    |                    ^^^^^^^^^^^^^^^
+    | AttributeError: 'NoneType' object has no attribute 'split'
+    | Failing test case: test_schedule_slot_no_crash(
+    |     s=None,  # or any other generated value
+    | )
+    +------------------------------------
+============================== warnings summary ===============================
+..\..\..\..\..\..\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anyio\pytest_plugin.py:14
+  C:\Users\abdullah\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\anyio\pytest_plugin.py:14: PytestRemovedIn10Warning: _pytest.python.CallSpec2 has been renamed to CallSpec.
+  The CallSpec2 alias will be removed in pytest 10.
+  Update imports to use CallSpec instead.
+  See https://docs.pytest.org/en/stable/deprecations.html#callspec2-renamed
+    from _pytest.python import CallSpec2
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED test_thermostat_control.py::test_parse_setpoint_no_crash - ExceptionGr...
+FAILED test_thermostat_control.py::test_average_temperature_no_crash - Except...
+FAILED test_thermostat_control.py::test_schedule_slot_no_crash - ExceptionGro...
+3 failed, 1 warning in 5.04s

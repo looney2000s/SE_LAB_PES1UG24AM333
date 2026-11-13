@@ -1,0 +1,6 @@
+Command: python -m pytest test_thermostat_control.py -q -k no_crash --color=no -p no:anyio
+
+...                                                                      [100%]
+3 passed, 86 deselected in 2.59s
+
+Exit code: 0
